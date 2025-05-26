@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #ffffff;
+  color: #333;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+.container {
+  padding-top: 100px;
+}
+
+.animate-btn {
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.animate-btn:hover {
+  background-color: #2ecc71;
+  transform: scale(1.1);
+}
+
+/* Optional animation on button click */
+.animate-btn.clicked {
+  animation: pop 0.4s ease;
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
